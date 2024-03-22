@@ -16,11 +16,11 @@ The goal of this project is to easily output automated slideshows given user inp
       
     - 3. The pip package management tool
 
-Set-Up:
-    Installation:
+## Set-Up:
+### Installation:
         1. Run pip install -r 'requirements.txt'
           
-    Configuration:
+### Configuration:
 
     1. Create a google account that you will use certain services for (Google Slides and Googe Sheets)  
       
@@ -47,6 +47,6 @@ Set-Up:
     10. Run the program in the terminal 'python example-config.py'
       
 
-Slide Format:
+## Slide Format:
   
 The slides have a pre-defined format associated with the data layout of the spreadsheet. If someone wants to add/remove the type of data in the spreadsheet, then they may also wish the alter the slide format. For example, if someone wanted to add a "description category", they would need a additional textbox element in the slide. This project will only produce one specific format.
