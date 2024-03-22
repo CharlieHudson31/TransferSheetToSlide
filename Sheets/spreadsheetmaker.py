@@ -1,9 +1,3 @@
-from openpyxl import Workbook
-from openpyxl.styles import Font
-from openpyxl.chart import BarChart, Series, Reference
-import os.path
-
-from google.auth.transport.requests import Request
 from googleapiclient.discovery import build
 from googleapiclient.errors import HttpError
 #sheets have a title property, cells have a value property
@@ -20,9 +14,6 @@ from googleapiclient.errors import HttpError
 def create(creds, title):
   """
   Creates the Sheet the user has access to.
-  Load pre-authorized user credentials from the environment.
-  TODO(developer) - See https://developers.google.com/identity
-  for guides on implementing OAuth2 for the application.
   """
   
   # pylint: disable=maybe-no-member
