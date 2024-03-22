@@ -51,5 +51,7 @@ The slides have a pre-defined format associated with the data layout of the spre
       
 10. Run the program in the terminal 'python example-config.py'
       
+### Todo
+Implement testing.
 
 

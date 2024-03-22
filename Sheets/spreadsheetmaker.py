@@ -1,15 +1,5 @@
 from googleapiclient.discovery import build
 from googleapiclient.errors import HttpError
-#sheets have a title property, cells have a value property
-#acess to a cell: c = ws['A4']
-# or d = ws.cell(row=4, column=2, value=10)
-# cells are created in memory when first accessed, not wheh wk is created
-# looping thru cells will take a lot of memory
-# instead:
-# range of cells: cell_range = ws['A1':'C2']
-# range of rows or cols: col_range = ws['C:D'],  row10 = [10], colC= ws['C']
-# or: for row in  Worksheet.iter_rows(), Worksheet.iter_cols() <-- this 1 in read only
-
 
 def create(creds, title):
   """

@@ -65,9 +65,8 @@ def creat_batch_slides():
     
 
 def main():
-    #page_ids, title_ids, author_ids = creat_batch_slides()
-    
-
+    page_ids, title_ids, author_ids = creat_batch_slides()
+    print("Done")
     return
 if __name__ == "__main__":
     main()

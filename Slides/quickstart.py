@@ -14,11 +14,12 @@ class SlideMaker:
       return error
     
   def create_page(self, page_id):
-    """ adds a slide to self.slides and to the presentation"""
+    """ 
+    Adds a slide to self.slides and to the presentation.
+    Layout: BLANK - A blank page with no elements
+    """
     try:
-    
-      # Add a slide at index 1 using the predefined
-      # BLANK' layout and the ID page_id.
+      # 
 
       requests = [
               {
@@ -54,8 +55,6 @@ class SlideMaker:
     return response
   
   def view_slides(self):
-    # The ID of a sample presentation:
-    #PRESENTATION_ID = "1uBvVHRLPS7udlcE4prR7uYd3iwFjOlLU0mOCGlB0DKQ"
     try:
 
       # Call the Slides API
@@ -78,9 +77,6 @@ class SlideMaker:
   def create_textbox_with_text(self, page_id, text_id ="default_id", new_text="Placeholder Text", dimension = None):
     """
     Creates the textbox with text, the user has access to.
-    Load pre-authorized user credentials from the environment.
-    TODO(developer) - See https://developers.google.com/identity
-    for guides on implementing OAuth2 for the application.
     """
     if (dimension is None):
       dimension = {'width': {"magnitude": 780, "unit": "PT"}, 'height' : {"magnitude": 38, "unit": "PT"}, 'offset' : [50,50]}
@@ -130,8 +126,7 @@ class SlideMaker:
     return response
 
   def get_text(self, SLIDE_IDX, name='v1'):
-      # The ID of a sample presentation:
-    #PRESENTATION_ID = "1uBvVHRLPS7udlcE4prR7uYd3iwFjOlLU0mOCGlB0DKQ"
+
     try:
       # Call the Slides API
       presentation = (
@@ -155,11 +150,7 @@ class SlideMaker:
   def text_replace(self, shape_id, replacement_text):
     """
     Run simple_text_replace the user has access to.
-    Load pre-authorized user credentials from the environment.
-    TODO(developer) - See https://developers.google.com/identity
-    for guides on implementing OAuth2 for the application.
     """
-
     try:
       # Remove existing text in the shape, then insert new text.
       requests = []
@@ -218,8 +209,6 @@ class SlideMaker:
       return error
 
   def change_title(self, PAGE_ID, new_title="default_title"):
-    # The ID of a sample presentation:
-    #PRESENTATION_ID = "1uBvVHRLPS7udlcE4prR7uYd3iwFjOlLU0mOCGlB0DKQ"
     try:
       delete_request = {
           'deleteText': {
@@ -250,7 +239,7 @@ class SlideMaker:
   
 
   def get_all_pages(self):
-          # Retrieve the presentation
+      # Retrieve the presentation
       presentation = self.service.presentations().get(presentationId=self.PRESENTATION_ID).execute()
 
       # Get all slides from the presentation
