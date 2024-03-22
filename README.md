@@ -1,14 +1,16 @@
 # TransferSheetToSlide
-This program transfers Google Sheet data into a new Google Slide presentation.
+
+
+##This program transfers Google Sheet data into a new Google Slide presentation.
 
 Goal: The goal of this project is to easily output automated slideshows given user input from a spreadsheet. 
 Workflow: [Manually Input Enter Spreadsheet Data] -> [Collect Spreadsheet Data from Sheets API] -> [Convert data into a textbox, and add to presentation with Slides API]
 
 Requirements:
-    1. Google Cloud Console Subscription 
+    "1" Google Cloud Console Subscription 
     https://console.cloud.google.com/
         Note. A free trial is currently available with no auto renewal.
-    2. A Google Account associated with the Cloud Console Account.
+    "2" A Google Account associated with the Cloud Console Account.
     3. The pip package management tool
 
 Set-Up:
